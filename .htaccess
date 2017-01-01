@@ -16,7 +16,7 @@ ErrorDocument 500 "<!DOCTYPE html><html lang=\"en\"><head> <meta charset=\"utf-8
 
 <IfModule mod_rewrite.c>
 
-#RewriteEngine On
+RewriteEngine On
 
 # PAGES WITHOUT .PHP AT THE END
 RewriteCond %{REQUEST_FILENAME} !-d
