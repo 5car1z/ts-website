@@ -1,36 +1,12 @@
-About the news system
-Wruczek, 2016-10-26, 21:00
+Twitch Streams
+LoY
 
-You can add, change and remove news as a separate Markdown files located in `config/news` folder with extension `.md`.
-
-I recommend following John Gruber's excellent markdown guide, found right under this text <i class="fa fa-long-arrow-down" aria-hidden="true"></i>. It's really worth reading. To view the code that makes up the guide, go to `config/news/news2.md`.
-
-I can also recommend GitHub's ["Mastering Markdown"](https://guides.github.com/features/mastering-markdown/) guide.
-
-**PS**: You can mix Markdown with HTML to add cool stuff like icons <i class="fa fa-smile-o" aria-hidden="true"></i> <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>, or even a full YouTube player with video!
+<iframe src="https://player.twitch.tv/?channel=realr1b" frameborder="0" allowfullscreen="true" scrolling="no" height="460" width="820"></iframe><a href="https://www.twitch.tv/realr1b?tt_medium=live_embed&tt_content=text_link" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px; text-decoration:underline;"></a>
 
 
-
-#### Informations:
-- News are read from the `config/news` folder, alphabetically sorted by file name. (news A.md will be at top of the page while Z.md at the bottom)
-- Every news file need to have `.md` (Markdown) extension
-- News file syntax:
-  - First line: News title
-  - Second line: author and date
-  - Third line: empty (seperator)
-  - The rest of the file is Markdown code and HTML
+<iframe src="https://player.twitch.tv/?channel=cptbendy" frameborder="0" allowfullscreen="true" scrolling="no" height="460" width="820"></iframe><a href="https://www.twitch.tv/cptbendy?tt_medium=live_embed&tt_content=text_link" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px; text-decoration:underline;"></a>
 
 
+<iframe src="https://player.twitch.tv/?channel=yarrgen" frameborder="0" allowfullscreen="true" scrolling="no" height="460" width="820"></iframe><a href="https://www.twitch.tv/yarrgen?tt_medium=live_embed&tt_content=text_link" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px; text-decoration:underline;"></a>
 
-#### Example news file:
-
-    News system test
-    Wruczek, 26-10-2016
-    
-    Hello **world**!
-    
-    I am the *news file*, you can save me in **config/news** folder with an **.md** extension to see me on the page!
-
-
-
-*Good luck and Happy writing! -Wruczek*
+<iframe src="https://player.twitch.tv/?channel=wiggidotexe" frameborder="0" allowfullscreen="true" scrolling="no" height="460" width="820"></iframe><a href="https://www.twitch.tv/wiggidotexe?tt_medium=live_embed&tt_content=text_link" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px; text-decoration:underline;"></a>
