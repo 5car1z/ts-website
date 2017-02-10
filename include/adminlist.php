@@ -1,23 +1,14 @@
 <?php
 require_once __DIR__ . "/tsutils.php";
-require_once __DIR__ . "/../lib/phpfastcache/autoload.php";
+require_once __DIR__ . "/cacheutils.class.php";
 
+$cacheutils = new CacheUtils('adminlist');
 
-use phpFastCache\Util;
-use phpFastCache\CacheManager;
-
-Util\Languages::setEncoding("UTF-8");
-$cache = CacheManager::Files();
-
-$adminlist = $cache->get('adminlist');
-
-// $cache->clean();
-
-if (is_null($adminlist)) {
-    $adminlist = array(getAdminList(), date('d-m-Y H:i:s'));
-    $cache->set('adminlist', $adminlist, 30);
+if($cacheutils->isExpired()) {
+    $cacheutils->setValue([getAdminList(), date('d-m-Y H:i:s')], 30);
 }
 
+$adminlist = $cacheutils->getValue();
 
 // FUNCTIONS
 
@@ -29,7 +20,7 @@ function getAdminList() {
     $localIcons = array(100, 200, 300, 400, 500, 600);
 
     try {
-        $tsAdmin = TeamSpeak3::factory(getTeamspeakURI() . "#no_query_clients");
+        $tsAdmin = getTeamspeakConnection();
 
         $output = "";
 
@@ -68,6 +59,8 @@ function getAdminList() {
 
             foreach ($clients as $userInfo) {
                 $user = getClientByDbid($tsAdmin, $userInfo['cldbid']);
+
+                if($user["client_type"]) continue;
 
                 if (!$user) {
                     $offlineClients[] = '<p><span class="label label-primary iconspacer">' . $userInfo['client_nickname'] . '</span><span class="label label-danger pull-right">' . translate($lang["adminlist"]["status"]["offline"]) . '</span></p>';
