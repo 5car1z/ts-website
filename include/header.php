@@ -8,7 +8,7 @@ require_once __DIR__ . "/../include/adminlist.php";
 $htalink = $config["general"]["enablehta"] ? "" : ".php";
 ?>
 <!DOCTYPE html>
-<html lang="pl">
+<html>
 
 <head>
     <meta charset="utf-8">
@@ -104,12 +104,15 @@ $htalink = $config["general"]["enablehta"] ? "" : ".php";
                             <li><a href="?lang=de"><i class="famfamfam-flags de" aria-hidden="true"></i> Deutsch</a></li>
                             <li><a href="?lang=nl"><i class="famfamfam-flags nl" aria-hidden="true"></i> Nederlands</a></li>
                             <li><a href="?lang=ru"><i class="famfamfam-flags ru" aria-hidden="true"></i> Русский</a></li>
+                            <li><a href="?lang=by"><i class="famfamfam-flags by" aria-hidden="true"></i> Беларуская мова</a></li>
                             <li><a href="?lang=tr"><i class="famfamfam-flags tr" aria-hidden="true"></i> Türkçe</a></li>
                             <li><a href="?lang=cz"><i class="famfamfam-flags cz" aria-hidden="true"></i> Česky</a></li>
                             <li><a href="?lang=br"><i class="famfamfam-flags br" aria-hidden="true"></i> Português</a></li>
                             <li><a href="?lang=fr"><i class="famfamfam-flags fr" aria-hidden="true"></i> Français</a></li>
+                            <li><a href="?lang=it"><i class="famfamfam-flags it" aria-hidden="true"></i> Italiano</a></li>
                             <li><a href="?lang=ua"><i class="famfamfam-flags ua" aria-hidden="true"></i> Українська</a></li>
                             <li><a href="?lang=es"><i class="famfamfam-flags es" aria-hidden="true"></i> Español</a></li>
+                            <li><a href="?lang=gr"><i class="famfamfam-flags gr" aria-hidden="true"></i> Ελληνικά</a></li>
                         </ul>
                     </li>
                 </ul>
