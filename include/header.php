@@ -66,7 +66,7 @@ $htalink = $config["general"]["enablehta"] ? "" : ".php";
                     <span class="icon-bar"></span>
                 </button>
 
-                <a class="navbar-brand" href="."><img style="width: 64px;" src="img/icon/icon-64.png" alt="Logo strony"><?php echo $config["general"]["title"]; ?></a>
+                <a class="navbar-brand" href="."><img style="width: 64px;" src="img/icon/icon-64.png" alt="Site logo"><?php echo $config["general"]["title"]; ?></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -75,7 +75,7 @@ $htalink = $config["general"]["enablehta"] ? "" : ".php";
                     <li><a href="viewer<?php echo $htalink ?>"><i class="fa fa-eye" aria-hidden="true"></i> <?php tl($lang["navbar"]["viewer"]); ?></a></li>
                     <li><a href="bans<?php echo $htalink ?>"><i class="fa fa-ban" aria-hidden="true"></i> <?php tl($lang["navbar"]["bans"]); ?></a></li>
                     <li><a href="rules<?php echo $htalink ?>"><i class="fa fa-book" aria-hidden="true"></i> <?php tl($lang["navbar"]["rules"]); ?></a></li>
-                    <!-- Nie mam na to czasu
+                    <!-- I don't have time for this.
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-television" aria-hidden="true"></i></i>Ranking <span class="caret"></span></a>
                         <ul class="dropdown-menu">
@@ -99,20 +99,27 @@ $htalink = $config["general"]["enablehta"] ? "" : ".php";
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="famfamfam-flags <?php echo $langcode == "en" ? "gb" : $langcode; ?>" aria-hidden="true"></i> Language <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="?lang=en"><i class="famfamfam-flags gb" aria-hidden="true"></i> English</a></li>
-                            <li><a href="?lang=pl"><i class="famfamfam-flags pl" aria-hidden="true"></i> Polski</a></li>
-                            <li><a href="?lang=de"><i class="famfamfam-flags de" aria-hidden="true"></i> Deutsch</a></li>
-                            <li><a href="?lang=nl"><i class="famfamfam-flags nl" aria-hidden="true"></i> Nederlands</a></li>
-                            <li><a href="?lang=ru"><i class="famfamfam-flags ru" aria-hidden="true"></i> Русский</a></li>
-                            <li><a href="?lang=by"><i class="famfamfam-flags by" aria-hidden="true"></i> Беларуская мова</a></li>
-                            <li><a href="?lang=tr"><i class="famfamfam-flags tr" aria-hidden="true"></i> Türkçe</a></li>
-                            <li><a href="?lang=cz"><i class="famfamfam-flags cz" aria-hidden="true"></i> Česky</a></li>
-                            <li><a href="?lang=br"><i class="famfamfam-flags br" aria-hidden="true"></i> Português</a></li>
-                            <li><a href="?lang=fr"><i class="famfamfam-flags fr" aria-hidden="true"></i> Français</a></li>
-                            <li><a href="?lang=it"><i class="famfamfam-flags it" aria-hidden="true"></i> Italiano</a></li>
-                            <li><a href="?lang=ua"><i class="famfamfam-flags ua" aria-hidden="true"></i> Українська</a></li>
-                            <li><a href="?lang=es"><i class="famfamfam-flags es" aria-hidden="true"></i> Español</a></li>
-                            <li><a href="?lang=gr"><i class="famfamfam-flags gr" aria-hidden="true"></i> Ελληνικά</a></li>
+
+                            <!-- Languages are sorted by number of total users in millions in all countries, based on ethnologue.com and Wikipedia -->
+
+                            <li><a href="?lang=en"><i class="famfamfam-flags gb" aria-hidden="true"></i> English</a></li>         <!-- English    : 1010    -->
+                            <li><a href="?lang=es"><i class="famfamfam-flags es" aria-hidden="true"></i> Español</a></li>         <!-- Spanish    : 528     -->
+                            <li><a href="?lang=ru"><i class="famfamfam-flags ru" aria-hidden="true"></i> Русский</a></li>         <!-- Russian    : 268     -->
+                            <li><a href="?lang=br"><i class="famfamfam-flags br" aria-hidden="true"></i> Português</a></li>       <!-- Portuguese : 229,945 -->
+                            <li><a href="?lang=fr"><i class="famfamfam-flags fr" aria-hidden="true"></i> Français</a></li>        <!-- French     : 229,582 -->
+                            <li><a href="?lang=de"><i class="famfamfam-flags de" aria-hidden="true"></i> Deutsch</a></li>         <!-- German     : 130     -->
+                            <li><a href="?lang=tr"><i class="famfamfam-flags tr" aria-hidden="true"></i> Türkçe</a></li>          <!-- Turkish    : 71      -->
+                            <li><a href="?lang=it"><i class="famfamfam-flags it" aria-hidden="true"></i> Italiano</a></li>        <!-- Italian    : 66      -->
+                            <li><a href="?lang=pl"><i class="famfamfam-flags pl" aria-hidden="true"></i> Polski</a></li>          <!-- Polish     : 41      -->
+                            <li><a href="?lang=ua"><i class="famfamfam-flags ua" aria-hidden="true"></i> Українська</a></li>      <!-- Ukrainian  : 35      -->
+                            <li><a href="?lang=nl"><i class="famfamfam-flags nl" aria-hidden="true"></i> Nederlands</a></li>      <!-- Dutch      : 22      -->
+                            <li><a href="?lang=cz"><i class="famfamfam-flags cz" aria-hidden="true"></i> Česky</a></li>           <!-- Czech      : 13,217  -->
+                            <li><a href="?lang=gr"><i class="famfamfam-flags gr" aria-hidden="true"></i> Ελληνικά</a></li>        <!-- Greek      : 13,134  -->
+                            <li><a href="?lang=hu"><i class="famfamfam-flags hu" aria-hidden="true"></i> Magyar</a></li>          <!-- Hungarian  : 13      -->
+                            <li><a href="?lang=se"><i class="famfamfam-flags se" aria-hidden="true"></i> Svenska</a></li>         <!-- Swedish    : 12      -->
+                            <li><a href="?lang=bg"><i class="famfamfam-flags bg" aria-hidden="true"></i> български</a></li>       <!-- Bulgarian  : 8       -->
+                            <li><a href="?lang=da"><i class="famfamfam-flags dk" aria-hidden="true"></i> Dansk</a></li>           <!-- Danish     : 6       -->
+                            <li><a href="?lang=by"><i class="famfamfam-flags by" aria-hidden="true"></i> Беларуская мова</a></li> <!-- Belarusian : 3       -->
                         </ul>
                     </li>
                 </ul>
